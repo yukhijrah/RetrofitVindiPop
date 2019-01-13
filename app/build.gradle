@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "vindipop.app.retrofitvindipop"
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:28.+'
+    compile 'com.android.support:recyclerview-v7:28.+'
+    compile 'com.squareup.retrofit2:retrofit:2.5.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.5.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:28.+'
+    testCompile 'junit:junit:4.12'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    compile 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+}
